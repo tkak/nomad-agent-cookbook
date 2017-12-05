@@ -1,2 +1,4 @@
-# nomad-cookbook
-Application cookbook which installs and configures Nomad.
+# nomad
+
+TODO: Enter the cookbook description here.
+
