@@ -1,4 +1,4 @@
-name 'nomad'
+name 'nomad-agent'
 maintainer 'Takaaki Furukawa'
 maintainer_email 'takaaki.frkw@gmail.com'
 license 'All Rights Reserved'
