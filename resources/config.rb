@@ -1,3 +1,5 @@
+resource_name :nomad_config
+
 property :path, String, name_attribute: true
 property :owner, String, default: lazy { node['nomad']['service_user'] }
 property :group, String, default: lazy { node['nomad']['service_group'] }

@@ -1,3 +1,5 @@
+resource_name :nomad_service
+
 property :config_file, String, default: lazy { node['nomad']['config']['path'] }
 property :config_dir, String, default: lazy { node['nomad']['service']['config_dir'] }
 property :user, String, default: lazy { node['nomad']['service_user'] }

@@ -1,3 +1,5 @@
+resource_name :nomad_installation
+
 default_action :create
 
 property :version, String, name_attribute: true
