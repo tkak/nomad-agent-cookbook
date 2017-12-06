@@ -19,7 +19,8 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[nomad::default]
+      - recipe[consul]
+      - recipe[nomad-agent::default]
     verifier:
       inspec_tests:
         - test/smoke/default

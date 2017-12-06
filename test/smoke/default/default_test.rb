@@ -1,6 +1,6 @@
 # # encoding: utf-8
 
-# Inspec test for recipe nomad::default
+# Inspec test for recipe nomad-agent::default
 
 # The Inspec reference, with examples and extensive documentation, can be
 # found at http://inspec.io/docs/reference/resources/
@@ -12,7 +12,14 @@ unless os.windows?
   end
 end
 
-# This is an example test, replace it with your own test.
-describe port(80), :skip do
-  it { should_not be_listening }
+describe systemd_service('consul') do
+  it { should be_installed }
+  it { should be_enabled }
+  it { should be_running }
+end
+
+describe systemd_service('nomad') do
+  it { should be_installed }
+  it { should be_enabled }
+  it { should be_running }
 end
