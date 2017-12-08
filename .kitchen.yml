@@ -25,3 +25,7 @@ suites:
       inspec_tests:
         - test/smoke/default
     attributes:
+      nomad:
+        config:
+          server:
+            enabled: true
