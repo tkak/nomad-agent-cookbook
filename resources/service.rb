@@ -98,8 +98,6 @@ action_class do
         'After' => 'network.target',
       },
       'Service' => {
-        'User' => new_resource.user,
-        'Group' => new_resource.group,
         'ExecStart' => "#{new_resource.program} agent -config=#{new_resource.config_file} -config=#{new_resource.config_dir}",
         'ExecReload' => '/bin/kill -HUP $MAINPID',
         'WorkingDirectory' => new_resource.data_dir,
