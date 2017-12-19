@@ -23,7 +23,6 @@ property :http_api_response_headers, [Hash, Mash]
 property :leave_on_interrupt, [true, false]
 property :leave_on_terminate, [true, false]
 property :log_level, String
-property :name, String
 property :ports, [Hash, Mash]
 property :region, String
 property :sentinel, [Hash, Mash]
@@ -76,7 +75,6 @@ action_class do
       leave_on_interrupt
       leave_on_terminate
       log_level
-      name
       ports
       region
       sentinel
