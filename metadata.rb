@@ -1,10 +1,10 @@
 name 'nomad-agent'
 maintainer 'Takaaki Furukawa'
 maintainer_email 'takaaki.frkw@gmail.com'
-license 'All Rights Reserved'
+license 'Apache-2.0'
 description 'Installs/Configures nomad'
 long_description 'Installs/Configures nomad'
-version '0.1.5'
+version '0.1.6'
 chef_version '>= 12.5'
 
 depends 'poise-archive'

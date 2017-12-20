@@ -86,7 +86,7 @@ action_class do
     for_keeps = for_keeps.flatten
 
     config = options.to_hash.select do |k, v|
-      v != nil && for_keeps.include?(k.to_sym)
+      !v.nil? && for_keeps.include?(k.to_sym)
     end
     JSON.pretty_generate(Hash[config.sort_by { |k, _| k.to_s }], quirks_mode: true)
   end
