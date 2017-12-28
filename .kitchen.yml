@@ -8,6 +8,7 @@ provisioner:
   # For example:
   #   always_update_cookbooks: <%= !ENV['CI'] %>
   always_update_cookbooks: true
+  multiple_converge: 2
 
 verifier:
   name: inspec
@@ -21,9 +22,6 @@ suites:
     run_list:
       - recipe[consul]
       - recipe[nomad-agent::default]
-    verifier:
-      inspec_tests:
-        - test/smoke/default
     attributes:
       nomad:
         config:
