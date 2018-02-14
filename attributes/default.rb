@@ -3,6 +3,7 @@ default['nomad']['service_name'] = 'nomad'
 default['nomad']['service_user'] = 'nomad'
 default['nomad']['service_group'] = 'nomad'
 default['nomad']['create_service_user'] = true
+default['nomad']['archive_url'] = 'https://releases.hashicorp.com/nomad/'
 
 default['nomad']['config']['path'] = '/etc/nomad/default.json'
 default['nomad']['config']['data_dir'] = '/var/lib/nomad'

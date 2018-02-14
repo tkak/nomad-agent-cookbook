@@ -4,7 +4,7 @@ maintainer_email 'takaaki.frkw@gmail.com'
 license 'Apache-2.0'
 description 'Installs/Configures nomad'
 long_description 'Installs/Configures nomad'
-version '0.1.7'
+version '0.1.8'
 chef_version '>= 12.5'
 
 depends 'poise-archive'

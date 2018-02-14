@@ -17,7 +17,9 @@ nomad_config service_name do |r|
   notifies :reload, "nomad_service[#{service_name}]", :delayed
 end
 
-nomad_installation node['nomad']['version']
+nomad_installation node['nomad']['version'] do
+  archive_url node['nomad']['archive_url']
+end
 
 nomad_service service_name do |r|
   user node['nomad']['service_user']
