@@ -18,6 +18,7 @@ nomad_config service_name do |r|
 end
 
 nomad_installation node['nomad']['version'] do
+  archive_name node['nomad']['archive_name']
   archive_url node['nomad']['archive_url']
 end
 
