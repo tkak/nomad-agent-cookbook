@@ -9,6 +9,7 @@ jobs:
           command: |
             CHANNEL=stable
             VERSION=2.4.17
+            sudo apt-get update
             sudo apt-get install -y wget ssh rsync
             sudo wget --content-disposition "http://packages.chef.io/files/${CHANNEL}/chefdk/${VERSION}/ubuntu/14.04/chefdk_${VERSION}-1_amd64.deb" -O /tmp/chefdk.deb
             sudo dpkg -i /tmp/chefdk.deb
@@ -16,5 +17,4 @@ jobs:
       - run:
           name: Run Test-Kitchen
           command: |
-            docker login -u $DOCKER_USER -p $DOCKER_PASS
             KITCHEN_LOCAL_YAML=.kitchen.dokken.yml chef exec kitchen test
